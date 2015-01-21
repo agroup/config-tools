@@ -41,6 +41,9 @@ if [ ! -d "$LOGDIR" ]; then
     LOGDIR=$(mktemp -d)
 fi
 
+# Remove log files from previous runs (if reusing jenkins workspace)
+rm -f $LOGDIR/*
+
 TRY=5
 PARALLELSTEPS='none'
 
