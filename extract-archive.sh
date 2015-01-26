@@ -57,6 +57,8 @@ if [ -d /etc/jenkins_jobs/jobs ]; then
     else
         jjb=jenkins-jobs
     fi
+    # symlink job config for instack jobs
+    ln -f -s /home/stack/instack-undercloud/jenkins-jobs/* /etc/jenkins_jobs/jobs
     $jjb update --delete-old /etc/jenkins_jobs/jobs
 fi
 
