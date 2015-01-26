@@ -30,7 +30,7 @@ else
     USER=www-data
 fi
 
-rm -rf /etc/edeploy/*
+# rm -rf /etc/edeploy/*
 
 tar xf /tmp/archive.tar --no-same-owner -C /
 chown -R $SUDO_USER /etc/serverspec
